@@ -1,0 +1,29 @@
+From: Scott Boudreaux <scott@elyanlabs.com>
+Date: Mon, 20 Jan 2025
+Subject: [PATCH 1/3] Add ppc64le and ppc64 Rust cargo targets for PowerPC support
+
+This patch adds PowerPC 64-bit little-endian (ppc64le) and big-endian (ppc64)
+support to the tokenizers cmake configuration. Required for building HailoRT
+on IBM POWER8/POWER9 systems.
+
+---
+ hailort/cmake/external/tokenizers.cmake | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/hailort/cmake/external/tokenizers.cmake b/hailort/cmake/external/tokenizers.cmake
+index 1234567..abcdefg 100644
+--- a/hailort/cmake/external/tokenizers.cmake
++++ b/hailort/cmake/external/tokenizers.cmake
+@@ -67,6 +67,10 @@ else()
+           else()
+               set_readonly(TOKENIZERS_CPP_CARGO_TARGET aarch64-unknown-linux-gnu)
+           endif()
++      elseif(CMAKE_SYSTEM_PROCESSOR STREQUAL "ppc64le")
++          set_readonly(TOKENIZERS_CPP_CARGO_TARGET powerpc64le-unknown-linux-gnu)
++      elseif(CMAKE_SYSTEM_PROCESSOR STREQUAL "ppc64")
++          set_readonly(TOKENIZERS_CPP_CARGO_TARGET powerpc64-unknown-linux-gnu)
+       endif()
+       set(MLC_ENABLE_SENTENCEPIECE_TOKENIZER OFF) # Disable sentencepiece for reducing binary size
+       if (NOT HAILO_EXTERNALS_EXCLUDE_TARGETS)
+--
+2.39.0

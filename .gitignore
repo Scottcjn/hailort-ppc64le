@@ -1,0 +1,12 @@
+# Upstream repos (not included - clone separately)
+hailort/
+hailort-drivers/
+
+# Build artifacts
+*.o
+*.ko
+*.mod
+*.mod.c
+*.order
+*.symvers
+build/

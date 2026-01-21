@@ -1,0 +1,25 @@
+From: Scott Boudreaux <scott@elyanlabs.com>
+Date: Mon, 20 Jan 2025
+Subject: [PATCH 2/3] Add ppc64le to Python wheel platform list
+
+Adds PowerPC 64-bit little-endian to the list of supported platforms
+for the Python bindings wheel build.
+
+---
+ hailort/libhailort/bindings/python/platform/setup.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/hailort/libhailort/bindings/python/platform/setup.py b/hailort/libhailort/bindings/python/platform/setup.py
+index 1234567..abcdefg 100644
+--- a/hailort/libhailort/bindings/python/platform/setup.py
++++ b/hailort/libhailort/bindings/python/platform/setup.py
+@@ -255,6 +255,7 @@ if __name__ == "__main__":
+         platforms=[
+             "linux_x86_64",
+             "linux_aarch64",
++            "linux_ppc64le",
+         ],
+         url="https://hailo.ai/",
+         version="5.2.0",
+--
+2.39.0

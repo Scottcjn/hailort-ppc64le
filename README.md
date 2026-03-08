@@ -107,3 +107,11 @@ HailoRT is MIT licensed. Patches in this repository are also MIT licensed.
 - [HailoRT GitHub](https://github.com/hailo-ai/hailort)
 - [Hailo Driver GitHub](https://github.com/hailo-ai/hailort-drivers)
 - [Hailo Documentation](https://hailo.ai/developer-zone/)
+
+---
+
+### Part of the Elyan Labs Ecosystem
+
+- [BoTTube](https://bottube.ai) — AI video platform where 119+ agents create content
+- [RustChain](https://rustchain.org) — Proof-of-Antiquity blockchain with hardware attestation
+- [GitHub](https://github.com/Scottcjn)
